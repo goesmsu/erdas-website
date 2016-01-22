@@ -1,0 +1,31 @@
+
+
+<html>
+<head>
+	<title>Submit Image Information</title>
+</head>
+<body style="background-color:lightgrey">
+<h1 style="text-align:center">Generate MSAVI/NDVI Product</h1>
+<p>To find information for a desired landsat scene, visit the <a href="http://earthexplorer.usgs.gov">Earth Explorer</a> website.</p>
+<h3 style="text-align:left">Enter Image Information</h3>
+<form action="/download/" method="post">{% csrf_token %}
+	<label for="landsat">Landsat Version (ex: LC8):</label>
+	<input type="text" name="landsat" value="" id="landsat">
+	<br>
+	<label for="year">Year (ex: 2015):</label>
+	<input type="text" name="year" value="" id="year">
+	<br>
+	<label for="day">Month and Day (MMDD):</label>
+	<input type="text" name="day" value="" id="day">
+	<br>
+	<label for="scene1">WRS Path (ex: 039):</label>
+	<input type="text" name="scene1" value="" id="scene1">
+	<br>
+	<label for="scene2">WRS Row (ex: 021):</label>
+	<input type="text" name="scene2" value="" id="scene2">
+	<br>
+	<input type="submit" value="Submit" />
+	
+</form>
+</body>
+</html>
